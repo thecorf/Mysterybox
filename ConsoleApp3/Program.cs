@@ -1,10 +1,15 @@
-﻿namespace ConsoleApp3
+﻿using System.Reflection.Emit;
+
+namespace ConsoleApp3
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            MysteryBox Newbox = new MysteryBox("fra alle mig, til alle dig", "goldcoins", true);
+
+            Console.WriteLine(Newbox);
+
         }
     }
 }

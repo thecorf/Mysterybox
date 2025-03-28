@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace ConsoleApp3
 {
@@ -22,23 +23,26 @@ namespace ConsoleApp3
 
         public string Label
         {
-            get { return Label; }
+            get { return _label; }
             set { Label = value; }
         }
 
         public string Contains
         {
-            get { return Contains; }
+            get { return _contains; }
             set { Contains = value; }
         }
 
         public bool IsExplosive
         {
-            get { return IsExplosive; }
+            get { return _isExplosive; }
             set { IsExplosive = value; }
         }
 
-
+        public override string ToString()
+        {
+            return $"\nLabel: {Label} \n Contains: {Contains} \n Is it Explosive?: {IsExplosive}";
+        }
 
 
     }
